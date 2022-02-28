@@ -38,7 +38,6 @@ namespace PasswordManager
                 passwordTextBox.ResetText();
                 LenghtComboBoxValue = Convert.ToInt32(LenghtComboBox.Text);
                 string password = PasswordUtil.INSTANCE.createPassword(LenghtComboBoxValue, PasswordProviderTextBox.Text);
-                string FilePath = defaultPath + PasswordProviderTextBox.Text;
                 passwordTextBox.Text = password;
                 Directory.CreateDirectory(defaultPath);
                
@@ -63,9 +62,5 @@ namespace PasswordManager
 
         }
 
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
