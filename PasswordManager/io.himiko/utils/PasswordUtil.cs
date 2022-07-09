@@ -9,7 +9,7 @@ namespace PasswordManager.io.himiko.utils
     internal class PasswordUtil
     {
         public static PasswordUtil INSTANCE = new PasswordUtil();
-        private string password { get; set; }
+        private static string password { get; set; }
         private static Random random = new Random();
 
         public string createPassword(int lenght, string passwordForm)
